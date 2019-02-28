@@ -42,6 +42,7 @@ import android.widget.Toolbar;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import android.support.v7.content.res.AppCompatResources;
 
 
 public final class TSnackbar {
@@ -212,7 +213,7 @@ public final class TSnackbar {
 
     public TSnackbar setIconLeft(@DrawableRes int drawableRes, float sizeDp) {
         final TextView tv = mView.getMessageView();
-        Drawable drawable = ContextCompat.getDrawable(mContext, drawableRes);
+        Drawable drawable = AppCompatResources.getDrawable(mContext, drawableRes);
         if (drawable != null) {
             drawable = fitDrawable(drawable, (int) convertDpToPixel(sizeDp, mContext));
         } else {
@@ -225,7 +226,7 @@ public final class TSnackbar {
 
     public TSnackbar setIconRight(@DrawableRes int drawableRes, float sizeDp) {
         final TextView tv = mView.getMessageView();
-        Drawable drawable = ContextCompat.getDrawable(mContext, drawableRes);
+        Drawable drawable = AppCompatResources.getDrawable(mContext, drawableRes);
         if (drawable != null) {
             drawable = fitDrawable(drawable, (int) convertDpToPixel(sizeDp, mContext));
         } else {
